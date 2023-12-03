@@ -14,7 +14,18 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection){
-
+    // let playerSelection = prompt('Your selection: ');
+    
+    if (playerSelection === choices[0] && computerSelection === choices[1]){
+        console.log('You Lose! Paper beats rock.');
+    } else if (playerSelection === choices[1] && computerSelection === choices[2]){
+        console.log('You Lose! Scissors beats paper.');
+    } else if (playerSelection === choices[2] && computerSelection === choices[0]){
+        console.log('You lose! Rock beats scissors.');
+    } else {
+        console.log('You win!');
+    }
 }
 
 playRound(prompt('Your selection: '), getComputerChoice());
+console.log(getComputerChoice());
