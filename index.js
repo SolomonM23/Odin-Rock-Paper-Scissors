@@ -1,1 +1,13 @@
-console.log('Hello World');
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissors'];
+
+    let randomChoice = Math.floor(Math.random()*choices.length);
+    
+    if (randomChoice === 2) {
+        return choices[2];
+    } else if (randomChoice === 1){
+        return choices[1];
+    } else {
+        return choices[0];
+    }
+}
