@@ -1,5 +1,6 @@
+const choices = ['rock', 'paper', 'scissors'];
+
 function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissors'];
 
     let randomChoice = Math.floor(Math.random()*choices.length);
     
@@ -11,3 +12,9 @@ function getComputerChoice() {
         return choices[0];
     }
 }
+
+function playRound(playerSelection, computerSelection){
+
+}
+
+playRound(prompt('Your selection: '), getComputerChoice());
