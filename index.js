@@ -1,5 +1,5 @@
 const choices = ['rock', 'paper', 'scissors'];
-let playerSelection = prompt('Your selection: ');
+let playerSelection = prompt('Your selection: ').toLowerCase();
 let computerSelection = getComputerChoice();
 
 function getComputerChoice() {
