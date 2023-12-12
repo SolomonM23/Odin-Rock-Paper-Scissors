@@ -52,24 +52,25 @@ function playRound(playerSelection, computerSelection){
 }
 
 playRound(playerSelection, computerSelection);
+console.log(playRound( playerSelection, computerSelection));
 
 function game(){
     let playerScore = 0;
     let compScore = 0;
 
     //replay round if a tie
-    if (playRound() == 'its a tie'){
+    if (playRound(playerSelection, computerSelection) == 'its a tie'){
         playRound(playerSelection, computerSelection);
     }
 
     //player point
-    if (playRound().slice(0, 7) == 'You win!'){
+    if (playRound(playerSelection, computerSelection).slice(0, 7) == 'You win!'){
         playerScore += 1;
         console.log(playerScore);
     }
 
     //computer point
-    if (playRound().slice(0, 8) == 'You lose!'){
+    if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You lose!'){
         compScore += 1;
         console.log(compScore);
     }
