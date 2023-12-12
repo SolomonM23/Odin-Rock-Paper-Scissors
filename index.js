@@ -44,9 +44,9 @@ function playRound(playerSelection, computerSelection){
     //player chooses scissors
     if (playerSelection === choices[2]){
         if (computerSelection === choices[0]){
-            return('You lose! Rock beats scissors.');
+            return('You Lose! Rock beats scissors.');
         } else if (computerSelection === choices[1]){
-            return('You win! Scissors beats paper.');
+            return('You Win! Scissors beats paper.');
         }   
     } 
 }
@@ -64,15 +64,15 @@ function game(){
     }
 
     //player point
-    if (playRound(playerSelection, computerSelection).slice(0, 7) == 'You win!'){
+    if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You Win!'){
         playerScore += 1;
-        console.log(playerScore);
+        console.log('Player Score: ' + playerScore);
     }
 
     //computer point
-    if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You lose!'){
+    if (playRound(playerSelection, computerSelection).slice(0, 9) == 'You Lose!'){
         compScore += 1;
-        console.log(compScore);
+        console.log('Computer Score: ' + compScore);
     }
 
     //counter for player score
