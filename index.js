@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection){
     //check for a tie
     if (playerSelection === computerSelection) {
         return('its a tie');
-
+        
     } 
     
     //player choices rock
@@ -58,9 +58,12 @@ function game(){
     let playerScore = 0;
     let compScore = 0;
 
+
+    //replay the game
+    //for (let i = 0; i <= 5; i++){
     //replay round if a tie
     if (playRound(playerSelection, computerSelection) == 'its a tie'){
-        playRound(playerSelection, computerSelection);
+        playRound(prompt('Your selection: ').toLowerCase(), computerSelection);
     }
 
     //player point
@@ -74,6 +77,7 @@ function game(){
         compScore += 1;
         console.log('Computer Score: ' + compScore);
     }
+    //}
 
     //counter for player score
     for (playerScore; playerScore >= 3; playerScore++){
