@@ -21,7 +21,7 @@ function game(){
         if ( play() == 'cheese'){
             ++playerScore;
             console.log('player score: ' + playerScore);
-        } else if (play() == 'soup'){
+        } else if (play() == 'soup'){   //there is a re-prompt value issue here
             ++compScore;
             console.log('compScore: ' + compScore);
         }
