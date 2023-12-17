@@ -1,7 +1,7 @@
 //practice code
 
 
-let value = function play(){
+function play(){
     let user = prompt('say something: ');
 
     return (user);
@@ -18,6 +18,8 @@ function game(){
     let compScore = 0;
 
     while (playerScore < 4 || compScore < 4){
+        const value = play();
+        
         if ( value == 'cheese'){
             ++playerScore;
             console.log('player score: ' + playerScore);
