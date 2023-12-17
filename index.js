@@ -1,9 +1,7 @@
 const choices = ['rock', 'paper', 'scissors'];
-let playerSelection = prompt('Your selection: ').toLowerCase();
-let computerSelection = getComputerChoice();
 
 function getComputerChoice() {
-
+    
     let randomChoice = Math.floor(Math.random()*choices.length);
     
     if (randomChoice === 2) {
@@ -17,6 +15,9 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection){
+    let user = prompt('Your selection: ').toLowerCase();
+    let computer = getComputerChoice();
+    
     //check for a tie
     if (playerSelection === computerSelection) {
         return('its a tie');
@@ -51,32 +52,36 @@ function playRound(playerSelection, computerSelection){
     } 
 }
 
-playRound(playerSelection, computerSelection);
-console.log(playRound( playerSelection, computerSelection));
+console.log(playRound( user, computer));
 
 function game(){
     let playerScore = 0;
     let compScore = 0;
-
-
+    
     //replay the game
-    //for (let i = 0; i <= 5; i++){
+    
     //replay round if a tie
-    if (playRound(playerSelection, computerSelection) == 'its a tie'){
-        playRound(prompt('Your selection: ').toLowerCase(), computerSelection);
-    }
+    // if (battle == 'its a tie'){
+        
+        // }
+        
+        // while (playerScore < 4 || compScore < 4){
+        const round = playRound(playerSelection, computerSelection);
 
-    //player point
-    if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You Win!'){
-        playerScore += 1;
-        console.log('Player Score: ' + playerScore);
-    }
+        if ( round.slice(0, 8) == 'You Win!'){
+            ++playerScore;
+            console.log('player score: ' + playerScore);
+        } else if (round.slice(0, 9) == 'You Lose!'){ 
+            ++compScore;
+            console.log('compScore: ' + compScore);
+        }
 
-    //computer point
-    if (playRound(playerSelection, computerSelection).slice(0, 9) == 'You Lose!'){
-        compScore += 1;
-        console.log('Computer Score: ' + compScore);
-    }
+        if (playerScore == 3){
+            return console.log('Player Wins!');
+        } else if (compScore == 3){
+            return console.log('Computer Wins!');
+        }
+    // }
     //}
 
     //counter for player score

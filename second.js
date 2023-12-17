@@ -12,14 +12,12 @@ function play(){
 
 function game(){
 
-    // play();
 
     let playerScore = 0;
     let compScore = 0;
 
     while (playerScore < 4 || compScore < 4){
         const value = play();
-        
         if ( value == 'cheese'){
             ++playerScore;
             console.log('player score: ' + playerScore);
@@ -35,11 +33,6 @@ function game(){
         }
     }
 
-    // let x = 'cheese';
-
-    // for( let i = 0; i < 5; i++){
-    //     console.log(play());
-    // }
 }
 
 game();
