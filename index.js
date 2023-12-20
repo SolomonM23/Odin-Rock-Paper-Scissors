@@ -1,4 +1,6 @@
 const choices = ['rock', 'paper', 'scissors'];
+let user = prompt('Your selection: ').toLowerCase();
+let computer = getComputerChoice();
 
 function getComputerChoice() {
     
@@ -15,9 +17,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection){
-    let user = prompt('Your selection: ').toLowerCase();
-    let computer = getComputerChoice();
-    
+
     //check for a tie
     if (playerSelection === computerSelection) {
         return('its a tie');
@@ -52,21 +52,19 @@ function playRound(playerSelection, computerSelection){
     } 
 }
 
-console.log(playRound( user, computer));
 
 function game(){
     let playerScore = 0;
     let compScore = 0;
+
+
     
-    //replay the game
-    
-    //replay round if a tie
-    // if (battle == 'its a tie'){
-        
-        // }
-        
-        // while (playerScore < 4 || compScore < 4){
-        const round = playRound(playerSelection, computerSelection);
+    while (playerScore < 4 || compScore < 4){
+        let round = playRound( user, computer);
+
+        if (round == 'its a tie'){
+            return round;
+        }
 
         if ( round.slice(0, 8) == 'You Win!'){
             ++playerScore;
@@ -81,18 +79,8 @@ function game(){
         } else if (compScore == 3){
             return console.log('Computer Wins!');
         }
-    // }
-    //}
-
-    //counter for player score
-    for (playerScore; playerScore >= 3; playerScore++){
-        console.log('Your Score: ' + (playerScore += 1));
     }
 
-    //counter for computer score
-    for (compScore; compScore >= 3; compScore++){
-        console.log('Computer Score: ' + (compScore+= 1));
-    }
 }
 
 game();
