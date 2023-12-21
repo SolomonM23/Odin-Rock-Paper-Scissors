@@ -1,4 +1,5 @@
 const choices = ['rock', 'paper', 'scissors'];
+game();
 
 function getComputerChoice() {
     
@@ -86,5 +87,3 @@ function game(){
     }
 
 }
-
-game();
