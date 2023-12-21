@@ -1,6 +1,4 @@
 const choices = ['rock', 'paper', 'scissors'];
-let user = prompt('Your selection: ').toLowerCase();
-let computer = getComputerChoice();
 
 function getComputerChoice() {
     
@@ -54,18 +52,20 @@ function playRound(playerSelection, computerSelection){
 
 
 function game(){
+    
     let playerScore = 0;
     let compScore = 0;
-
-
     
-    while (playerScore < 4 || compScore < 4){
+    for ( let games = 1; games <= 5; games++){
+        let user = prompt('Your selection: ').toLowerCase();
+        let computer = getComputerChoice();
+
         let round = playRound( user, computer);
-
+    
         if (round == 'its a tie'){
-            return round;
+            break;
         }
-
+    
         if ( round.slice(0, 8) == 'You Win!'){
             ++playerScore;
             console.log('player score: ' + playerScore);
@@ -73,12 +73,14 @@ function game(){
             ++compScore;
             console.log('compScore: ' + compScore);
         }
-
+    
         if (playerScore == 3){
             return console.log('Player Wins!');
         } else if (compScore == 3){
             return console.log('Computer Wins!');
         }
+
+        console.log('games: ' + games);
     }
 
 }
