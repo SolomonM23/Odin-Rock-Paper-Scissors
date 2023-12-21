@@ -59,11 +59,13 @@ function game(){
     for ( let games = 1; games <= 5; games++){
         let user = prompt('Your selection: ').toLowerCase();
         let computer = getComputerChoice();
+        console.log('Computer choice: ' + computer);
 
         let round = playRound( user, computer);
     
         if (round == 'its a tie'){
-            break;
+            console.log('its a tie. Game over');
+            game();
         }
     
         if ( round.slice(0, 8) == 'You Win!'){
