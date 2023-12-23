@@ -71,10 +71,10 @@ function game(){
     
         if ( round.slice(0, 8) == 'You Win!'){
             ++playerScore;
-            console.log('player score: ' + playerScore);
+            console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
         } else if (round.slice(0, 9) == 'You Lose!'){ 
             ++compScore;
-            console.log('compScore: ' + compScore);
+            console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
         }
     
         if (playerScore == 3){
