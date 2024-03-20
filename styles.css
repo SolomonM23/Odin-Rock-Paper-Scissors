@@ -36,8 +36,8 @@ main {
 
 /* Buttons */
 button {
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     border: none;
     border-radius: 20px;
     background-color: aqua;
@@ -79,4 +79,8 @@ div {
     width: 15rem;
     height: 15rem;
     border: 5px solid green;
+}
+
+.gameButtons {
+    border: 5px solid red;
 }
