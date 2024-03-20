@@ -53,11 +53,11 @@ function playRound(playerSelection, computerSelection){
 
 
 function game(){
-    
+    let gamesPlayed = 0;
     let playerScore = 0;
     let compScore = 0;
     
-    for ( let games = 1; games <= 5; games++){
+    while (playerScore < 3 && compScore < 3 ) {
         let user = prompt('Your selection: ').toLowerCase();
         let computer = getComputerChoice();
         console.log('Computer choice: ' + computer);
@@ -65,25 +65,23 @@ function game(){
         let round = playRound( user, computer);
         
         if (round == 'its a tie'){
-            console.log('its a tie. Game over');
-            game();
-        }
-        
-        if ( round.slice(0, 8) == 'You Win!'){
+            console.log(`It's a tie. Play again.`);
+        } else if ( round.slice(0, 8) == 'You Win!'){
             ++playerScore;
             console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
-        } else if (round.slice(0, 9) == 'You Lose!'){ 
+        } else { //not a tie, the player loses 
             ++compScore;
             console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
         }
-        
-        if (playerScore == 3){
-            return console.log('Player Wins!');
-        } else if (compScore == 3){
-            return console.log('Computer Wins!');
-        }
-        
-        console.log('games: ' + games);
+
+        gamesPlayed++;
+        console.log('games: ' + gamesPlayed);
     }
+
+    if (playerScore == 3){
+        console.log('Player Wins!');
+    } else if (compScore == 3){
+        console.log('Computer Wins!');
+    }    
     
 }
