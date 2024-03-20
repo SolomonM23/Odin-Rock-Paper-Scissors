@@ -78,7 +78,7 @@ div {
 .players div {
     width: 15rem;
     height: 15rem;
-    border: 5px solid green;
+    border: 5px solid red;
 }
 
 .gameButtons {
