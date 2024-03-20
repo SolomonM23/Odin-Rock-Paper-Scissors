@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     background: url(imgs/spaceWhite.gif);
     background-position: center;
@@ -6,4 +16,67 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+}
+
+
+/* Typography */
+h1 {
+    font-size: 3.5rem;
+}
+
+/* Sections */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Buttons */
+button {
+    width: 8rem;
+    height: 8rem;
+    border: none;
+    border-radius: 20px;
+    background-color: aqua;
+    margin: 1rem;
+}
+
+/* Divs */
+div {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    background-color: aqua;
+    width: 40rem;
+    height: 8rem;
+    margin-top: 4rem;
+}
+
+.games {
+    background-color: aqua;
+    width: 25rem;
+    height: 5rem;
+    margin-top: 3rem;
+}
+
+.players {
+    width: 45rem;
+    height: 20rem;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    margin: 10rem;
+}
+
+.players div {
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid green;
 }
