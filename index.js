@@ -3,16 +3,8 @@ game();
 
 function getComputerChoice() {
     
-    let randomChoice = Math.floor(Math.random()*choices.length);
-    
-    if (randomChoice === 2) {
-        return choices[2];
-    } else if (randomChoice === 1){
-        return choices[1];
-    } else {
-        return choices[0];
-    }
-    
+    let randomChoice = Math.floor(Math.random() * choices.length);
+    return choices[randomChoice];
 }
 
 function playRound(playerSelection, computerSelection){
@@ -52,14 +44,12 @@ function playRound(playerSelection, computerSelection){
 }
 
 let rockBtn = document.querySelector('.rock');
-rockBtn.addEventListener('click', playRound( choices[0], computerSelection));
-
 let paperBtn = document.querySelector('.paper');
-paperBtn.addEventListener('click', playRound(choices[1], computerSelection));
-
 let scissorBtn = document.querySelector('.scissors');
-scissorBtn.addEventListener('click', playRound(choices[2], computerSelection));
 
+rockBtn.addEventListener('click', playRound( choices[0], computerSelection));
+paperBtn.addEventListener('click', playRound(choices[1], computerSelection));
+scissorBtn.addEventListener('click', playRound(choices[2], computerSelection));
 
 function game(){
     let gamesPlayed = 0;
