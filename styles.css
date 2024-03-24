@@ -24,6 +24,10 @@ h1 {
     font-size: 3.5rem;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 /* Sections */
 main {
     display: flex;
@@ -80,10 +84,14 @@ div {
     margin: 10rem;
 }
 
-.players div {
+.players .user,
+.players .computer {
+    display: flex;
+    flex-direction: column;
     width: 15rem;
     height: 15rem;
     border: 5px solid red;
+    color: white;
 }
 
 .gameButtons {
