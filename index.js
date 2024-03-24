@@ -12,7 +12,6 @@ function playRound(playerSelection, computerSelection){
     //check for a tie
     if (playerSelection === computerSelection) {
         return('its a tie');
-        
     } 
     
     //player choices rock
