@@ -51,6 +51,8 @@ function playRound(playerSelection, computerSelection){
     } 
 }
 
+let rockBtn = document.querySelector('.rock');
+rockBtn.addEventListener('click', playRound( choices[0], computerSelection));
 
 function game(){
     let gamesPlayed = 0;
@@ -58,7 +60,7 @@ function game(){
     let compScore = 0;
     
     while (playerScore < 3 && compScore < 3 ) {
-        let user = prompt('Your selection: ').toLowerCase();
+        // let user = prompt('Your selection: ').toLowerCase();
         let computer = getComputerChoice();
         console.log('Computer choice: ' + computer);
         
