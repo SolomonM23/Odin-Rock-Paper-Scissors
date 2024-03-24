@@ -54,6 +54,13 @@ function playRound(playerSelection, computerSelection){
 let rockBtn = document.querySelector('.rock');
 rockBtn.addEventListener('click', playRound( choices[0], computerSelection));
 
+let paperBtn = document.querySelector('.paper');
+paperBtn.addEventListener('click', playRound(choices[1], computerSelection));
+
+let scissorBtn = document.querySelector('.scissors');
+scissorBtn.addEventListener('click', playRound(choices[2], computerSelection));
+
+
 function game(){
     let gamesPlayed = 0;
     let playerScore = 0;
