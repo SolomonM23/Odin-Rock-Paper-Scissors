@@ -75,7 +75,6 @@ div {
 .players {
     width: 45rem;
     height: 20rem;
-    background-color: aqua;
     display: flex;
     justify-content: space-around;
     margin: 10rem;
@@ -88,5 +87,12 @@ div {
 }
 
 .gameButtons {
-    border: 5px solid red;
+    padding: 2rem;
+}
+
+.blur{
+    background-color: rgba(149, 149, 149, .2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+    backdrop-filter: saturate(180%) blur(15px);
 }
