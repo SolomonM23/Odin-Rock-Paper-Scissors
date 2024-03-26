@@ -142,6 +142,7 @@ function game(){
         playerScore = 0;
         compScore = 0;
         gamesPlayed = 0;
+        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
         console.log('Game Reset! Scores: 0 - 0');
       
         // After a short delay (optional)
