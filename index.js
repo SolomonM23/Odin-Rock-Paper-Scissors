@@ -5,6 +5,8 @@ let paperBtn = document.querySelector('.paper');
 let scissorBtn = document.querySelector('.scissors');
 let resetBtn = document.querySelector('.reset');
 
+let scoreBoard = document.querySelector('.scoreBoard');
+
 game();
 
 function getComputerChoice() {
@@ -66,7 +68,7 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { // Not a tie and not a player win, computer wins
             compScore++; // Update score in game function for computer win
         }   
-        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
+        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
@@ -84,7 +86,7 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { 
             compScore++;
         }    
-        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
+        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
@@ -102,7 +104,7 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { 
             compScore++; 
         }
-        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
+        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
