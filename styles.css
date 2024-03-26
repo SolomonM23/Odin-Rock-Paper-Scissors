@@ -99,8 +99,15 @@ div {
     width: 15rem;
     height: 15rem;
     background-color: orange;
-    color: white;
+    color: black;
     box-shadow: 5px 5px 5px #202020;
+}
+
+.players .userScore,
+.players .computerScore {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .gameButtons {
