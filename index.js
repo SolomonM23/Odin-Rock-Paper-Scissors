@@ -3,6 +3,7 @@ const choices = ['rock', 'paper', 'scissors'];
 let rockBtn = document.querySelector('.rock');
 let paperBtn = document.querySelector('.paper');
 let scissorBtn = document.querySelector('.scissors');
+let resetBtn = document.querySelector('.reset');
 
 game();
 
@@ -130,4 +131,22 @@ function game(){
           // You can optionally reset the game here
         }
     }
+
+    resetBtn.addEventListener('click', function() {
+        rockBtn.disabled = true; // Disable buttons
+        paperBtn.disabled = true;
+        scissorBtn.disabled = true;
+        
+        playerScore = 0;
+        compScore = 0;
+        gamesPlayed = 0;
+        console.log('Game Reset! Scores: 0 - 0');
+      
+        // After a short delay (optional)
+        setTimeout(function() {
+          rockBtn.disabled = false; // Re-enable buttons
+          paperBtn.disabled = false;
+          scissorBtn.disabled = false;
+        }, 1000); // Delay in milliseconds (adjust as needed)
+    })
 }
