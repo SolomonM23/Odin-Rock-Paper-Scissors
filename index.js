@@ -6,6 +6,8 @@ let scissorBtn = document.querySelector('.scissors');
 let resetBtn = document.querySelector('.reset');
 
 let scoreBoard = document.querySelector('.scoreBoard');
+let userScoreboard = document.querySelector('.userScore');
+let compScoreBoard = document.querySelector('.computerScore');
 
 game();
 
@@ -68,9 +70,10 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { // Not a tie and not a player win, computer wins
             compScore++; // Update score in game function for computer win
         }   
-        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
+        userScoreboard.textContent = ('Score: ' + playerScore);
+        compScoreBoard.textContent = ('Score: ' + compScore);
         gamesPlayed++;
-        console.log('Games played: ' + gamesPlayed);
+        scoreBoard.textContent = ('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
     });
 
@@ -86,9 +89,10 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { 
             compScore++;
         }    
-        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
+        userScoreboard.textContent = ('Score: ' + playerScore);
+        compScoreBoard.textContent = ('Score: ' + compScore);
         gamesPlayed++;
-        console.log('Games played: ' + gamesPlayed);
+        scoreBoard.textContent = ('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
     });
 
@@ -104,9 +108,10 @@ function game(){
         } else if (round.slice(0, 9) == 'You Lose!') { 
             compScore++; 
         }
-        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
+        userScoreboard.textContent = ('Score: ' + playerScore);
+        compScoreBoard.textContent = ('Score: ' + compScore);
         gamesPlayed++;
-        console.log('Games played: ' + gamesPlayed);
+        scoreBoard.textContent = ('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
     });
 
@@ -142,8 +147,9 @@ function game(){
         playerScore = 0;
         compScore = 0;
         gamesPlayed = 0;
-        scoreBoard.textContent = ('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
-        console.log('Game Reset! Scores: 0 - 0');
+        scoreBoard.textContent = ('Game Reset! Scores: 0 - 0'); 
+        userScoreboard.textContent = ('Score: ' + playerScore);
+        compScoreBoard.textContent = ('Score: ' + compScore);
       
         // After a short delay (optional)
         setTimeout(function() {
