@@ -58,7 +58,7 @@ button img {
     padding: 1rem 2rem;
     width: auto;
     height: auto;
-    background: red;
+    background: radial-gradient( darkred, red);
     color: white;
 }
 
