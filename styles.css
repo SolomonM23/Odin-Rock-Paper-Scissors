@@ -55,6 +55,13 @@ button img {
     height: 40px;
 }
 
+.reset {
+    padding: 1rem 2rem;
+    width: auto;
+    height: auto;
+    background: red;
+}
+
 /* Divs */
 div {
     border-radius: 20px;
