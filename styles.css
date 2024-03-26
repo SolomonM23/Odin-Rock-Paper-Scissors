@@ -18,6 +18,10 @@ body {
     overflow: hidden;
 }
 
+/* Visibility */
+.hidden {
+    visibility: hidden;
+}
 
 /* Typography */
 h1 {

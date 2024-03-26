@@ -16,7 +16,6 @@ let main = document.querySelector('main');
 let playersDiv = document.querySelector('.players');
 let roundResults = document.createElement('div');
 roundResults.classList.add('roundResults');
-main.insertBefore(roundResults, playersDiv);
 
 game();
 
@@ -73,6 +72,9 @@ function game(){
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
         roundResults.textContent = (round);
+        if (roundResults.textContent.trim()){
+            main.insertBefore(roundResults, playersDiv);
+        }
         // Update scores and display messages based on round outcome
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; // Update score in game function for player win
@@ -93,6 +95,9 @@ function game(){
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
         roundResults.textContent = (round);
+        if (roundResults.textContent.trim()){
+            main.insertBefore(roundResults, playersDiv);
+        }
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; 
         } else if (round.slice(0, 9) == 'You Lose!') { 
@@ -112,6 +117,9 @@ function game(){
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
         roundResults.textContent = (round);
+        if (roundResults.textContent.trim()){
+            main.insertBefore(roundResults, playersDiv);
+        }
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; 
         } else if (round.slice(0, 9) == 'You Lose!') { 
@@ -159,6 +167,7 @@ function game(){
         scoreBoard.textContent = ('Game Reset! Scores: 0 - 0'); 
         userScoreboard.textContent = ('Score: ' + playerScore);
         compScoreBoard.textContent = ('Score: ' + compScore);
+        main.removeChild(roundResults);
       
         // After a short delay (optional)
         setTimeout(function() {
