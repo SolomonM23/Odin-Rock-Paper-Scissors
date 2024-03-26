@@ -60,7 +60,12 @@ function game(){
         console.log('Computer choice: ' + computer);
         console.log(round);
         // Update scores and display messages based on round outcome
-        updateScore(round, playerScore, compScore);
+        if (round.slice(0, 8) === 'You Win!') {
+            playerScore++; // Update score in game function for player win
+        } else if (round.slice(0, 9) == 'You Lose!') { // Not a tie and not a player win, computer wins
+            compScore++; // Update score in game function for computer win
+        }   
+        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore); 
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
@@ -73,7 +78,12 @@ function game(){
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
         console.log(round);
-        updateScore(round, playerScore, compScore);
+        if (round.slice(0, 8) === 'You Win!') {
+            playerScore++; 
+        } else if (round.slice(0, 9) == 'You Lose!') { 
+            compScore++;
+        }    
+        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
@@ -86,7 +96,12 @@ function game(){
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
         console.log(round);
-        updateScore(round, playerScore, compScore);
+        if (round.slice(0, 8) === 'You Win!') {
+            playerScore++; 
+        } else if (round.slice(0, 9) == 'You Lose!') { 
+            compScore++; 
+        }
+        console.log('Player Score: ' + playerScore + ' - Comp Score: ' + compScore);
         gamesPlayed++;
         console.log('Games played: ' + gamesPlayed);
         checkWinner(playerScore, compScore);
