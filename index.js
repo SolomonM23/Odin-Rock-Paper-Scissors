@@ -23,6 +23,11 @@ let compCard = document.querySelector('.computer');
 let winner = document.createElement('div');
 winner.classList.add('winner');
 
+//display computer choices
+let btnContainer = document.querySelector('.gameButtons');
+let compChoiceDiv = document.createElement('div');
+compChoiceDiv.classList.add('computerChoice');
+
 game();
 
 function getComputerChoice() {
@@ -76,9 +81,12 @@ function game(){
         let user = choices[0]; // Player selects rock
         let computer = getComputerChoice();
         let round = playRound(user, computer);
-        console.log('Computer choice: ' + computer);
+        compChoiceDiv.textContent = ('Computer choice: ' + computer);
+        if (compChoiceDiv.textContent.trim()){
+            main.insertBefore(compChoiceDiv, btnContainer);
+        }
         roundResults.textContent = (round);
-        if (roundResults.textContent.trim()){
+        if (roundResults.textContent.trim()){ //append div only if there is text content. otherwise its hidden
             main.insertBefore(roundResults, playersDiv);
         }
         // Update scores and display messages based on round outcome
@@ -99,7 +107,10 @@ function game(){
         let user = choices[1];
         let computer = getComputerChoice();
         let round = playRound(user, computer);
-        console.log('Computer choice: ' + computer);
+        compChoiceDiv.textContent = ('Computer choice: ' + computer);
+        if (compChoiceDiv.textContent.trim()){
+            main.insertBefore(compChoiceDiv, btnContainer);
+        }
         roundResults.textContent = (round);
         if (roundResults.textContent.trim()){
             main.insertBefore(roundResults, playersDiv);
@@ -121,7 +132,10 @@ function game(){
         let user = choices[2];
         let computer = getComputerChoice();
         let round = playRound(user, computer);
-        console.log('Computer choice: ' + computer);
+        compChoiceDiv.textContent = ('Computer choice: ' + computer);
+        if (compChoiceDiv.textContent.trim()){
+            main.insertBefore(compChoiceDiv, btnContainer);
+        }
         roundResults.textContent = (round);
         if (roundResults.textContent.trim()){
             main.insertBefore(roundResults, playersDiv);
@@ -176,6 +190,7 @@ function game(){
         userScoreboard.textContent = ('Score: ' + playerScore);
         compScoreBoard.textContent = ('Score: ' + compScore);
         main.removeChild(roundResults);
+        main.removeChild(compChoiceDiv);
 
         //remove winner banner/div from player card on reset
         let winnerDivs = [userCard, compCard]; // Array of both divs to check
