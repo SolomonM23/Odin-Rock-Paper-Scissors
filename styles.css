@@ -83,6 +83,14 @@ div {
     margin-top: 3rem;
 }
 
+.winner {
+    font-size: 3rem;
+    color: greenyellow;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 .roundResults {
     width: 30rem;
     height: 5rem;

@@ -17,6 +17,12 @@ let playersDiv = document.querySelector('.players');
 let roundResults = document.createElement('div');
 roundResults.classList.add('roundResults');
 
+//display winner
+let userCard = document.querySelector('.user');
+let compCard = document.querySelector('.computer');
+let winner = document.createElement('div');
+winner.classList.add('winner');
+
 game();
 
 function getComputerChoice() {
@@ -148,10 +154,12 @@ function game(){
     // Function to check for winner and end game
     function checkWinner(playerScore, compScore) {
         if (playerScore === 3) {
-          console.log('Player Wins!');
-          // You can optionally reset the game here
+            winner.textContent = ('Player Wins!');
+            userCard.appendChild(winner);
+            // You can optionally reset the game here
         } else if (compScore === 3) {
-          console.log('Computer Wins!');
+            winner.textContent = ('Computer Wins!');
+            compCard.appendChild(winner);
           // You can optionally reset the game here
         }
     }
@@ -168,6 +176,18 @@ function game(){
         userScoreboard.textContent = ('Score: ' + playerScore);
         compScoreBoard.textContent = ('Score: ' + compScore);
         main.removeChild(roundResults);
+
+        //remove winner banner/div from player card on reset
+        let winnerDivs = [userCard, compCard]; // Array of both divs to check
+
+        for (let i = 0; i < winnerDivs.length; i++) {
+            let currentDiv = winnerDivs[i];
+            if (currentDiv.contains(winner)) { // Check if winner element exists in current div
+                currentDiv.removeChild(winner);
+                break; // Exit the loop after removing from the first matching div
+            }
+        }
+
       
         // After a short delay (optional)
         setTimeout(function() {
