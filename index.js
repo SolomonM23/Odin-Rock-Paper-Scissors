@@ -167,11 +167,11 @@ function game(){
 
     // Function to check for winner and end game
     function checkWinner(playerScore, compScore) {
-        if (playerScore === 3) {
+        if (playerScore === 5) {
             winner.textContent = ('Player Wins!');
             userCard.appendChild(winner);
             // You can optionally reset the game here
-        } else if (compScore === 3) {
+        } else if (compScore === 5) {
             winner.textContent = ('Computer Wins!');
             compCard.appendChild(winner);
           // You can optionally reset the game here
