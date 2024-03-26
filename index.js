@@ -1,13 +1,22 @@
 const choices = ['rock', 'paper', 'scissors'];
 
+//Buttons
 let rockBtn = document.querySelector('.rock');
 let paperBtn = document.querySelector('.paper');
 let scissorBtn = document.querySelector('.scissors');
 let resetBtn = document.querySelector('.reset');
 
+//Scores
 let scoreBoard = document.querySelector('.scoreBoard');
 let userScoreboard = document.querySelector('.userScore');
 let compScoreBoard = document.querySelector('.computerScore');
+
+//Results of each round
+let main = document.querySelector('main');
+let playersDiv = document.querySelector('.players');
+let roundResults = document.createElement('div');
+roundResults.classList.add('roundResults');
+main.insertBefore(roundResults, playersDiv);
 
 game();
 
@@ -63,7 +72,7 @@ function game(){
         let computer = getComputerChoice();
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
-        console.log(round);
+        roundResults.textContent = (round);
         // Update scores and display messages based on round outcome
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; // Update score in game function for player win
@@ -83,7 +92,7 @@ function game(){
         let computer = getComputerChoice();
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
-        console.log(round);
+        roundResults.textContent = (round);
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; 
         } else if (round.slice(0, 9) == 'You Lose!') { 
@@ -102,7 +111,7 @@ function game(){
         let computer = getComputerChoice();
         let round = playRound(user, computer);
         console.log('Computer choice: ' + computer);
-        console.log(round);
+        roundResults.textContent = (round);
         if (round.slice(0, 8) === 'You Win!') {
             playerScore++; 
         } else if (round.slice(0, 9) == 'You Lose!') { 
