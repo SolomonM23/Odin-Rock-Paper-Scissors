@@ -35,6 +35,7 @@ main {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
 
 /* Buttons */
@@ -94,12 +95,16 @@ div {
 
 .roundResults {
     width: 30rem;
-    height: 5rem;
+    height: 3rem;
     margin-top: 3rem;
     font-size: 2rem;
     color: white;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     background: linear-gradient(45deg, red, orange);
+    position: absolute;
+    top: 185px;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .players {
