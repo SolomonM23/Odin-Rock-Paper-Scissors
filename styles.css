@@ -136,9 +136,9 @@ div {
     width: 25rem;
     height: 3rem;
     font-size: 2rem;
-    color: white;
+    color: black;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(45deg, red, orange);
+    background: linear-gradient(45deg, rgb(255, 225, 0), orange);
     position: absolute;
     top: 510px;
     right: 50%;
