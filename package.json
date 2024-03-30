@@ -1,10 +1,12 @@
 {
   "name": "odin-rock-paper-scissors",
+  "source": "src/index.html",
   "version": "1.0.0",
   "description": "user plays a game of rock-paper-scissors against the computer. first player to 5 points wins the game",
   "main": "index.js",
   "scripts": {
-    "test": "build"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,6 @@
   },
   "homepage": "https://github.com/SolomonM23/Odin-Rock-Paper-Scissors#readme",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "latest"
   }
 }
