@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: url(imgs/spaceWhite.gif);
+    background: url(../imgs/spaceWhite.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

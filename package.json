@@ -1,29 +1,16 @@
 {
   "name": "odin-rock-paper-scissors",
-  "source": "src/index.js",
   "version": "1.0.0",
-  "description": "user plays a game of rock-paper-scissors against the computer. first player to 5 points wins the game",
+  "description": "Play a game of rock-paper-scissors against the computer.",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.js",
-    "build": "parcel build src/index.js"
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SolomonM23/Odin-Rock-Paper-Scissors.git"
-  },
-  "keywords": [
-    "rock",
-    "paper",
-    "scissors"
-  ],
-  "author": "Solomon Malone",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SolomonM23/Odin-Rock-Paper-Scissors/issues"
-  },
-  "homepage": "https://github.com/SolomonM23/Odin-Rock-Paper-Scissors#readme",
   "devDependencies": {
-    "parcel": "latest"
+    "parcel-bundler": "^1.12.5"
   }
 }
