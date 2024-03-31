@@ -1,12 +1,12 @@
 {
   "name": "odin-rock-paper-scissors",
-  "source": "src/index.html",
+  "source": "src/index.js",
   "version": "1.0.0",
   "description": "user plays a game of rock-paper-scissors against the computer. first player to 5 points wins the game",
   "main": "index.js",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/index.js",
+    "build": "parcel build src/index.js"
   },
   "repository": {
     "type": "git",
